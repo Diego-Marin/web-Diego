@@ -5,6 +5,7 @@
     padding: 0%;
     margin: 0%;
     color: white;
+
     /* @import url('https://fonts.googleapis.com/css2? family= Fira+Code:wght@400;700 & display=swap');
     font-family: 'Fira Code', monospace; */
 
@@ -12,15 +13,31 @@
     font-family: 'Noto Sans Mono', monospace;
 }
 body{
-    display: grid;
-    place-items: center;
+    width: 100%;
+    height: 100vh;
+    position:relative;
     background: #1a1c20;
     overflow-x:hidden;
     overflow-y:hidden;
 }
+#logo-preloader {
+    width: 100%;
+    height: 100vh;
+    position:relative;
+    text-align:center;
+    z-index: 10;
+  }
+#logo-preloader img {
+    position:absolute;
+    top:50%;
+    left:50%;
+    transform: translate(-50%,-50%);
+    z-index: 10;
+}
 main{
     display:grid;
-    grid-template-columns: 1fr minmax(40px, 10%) ;
+    grid-template-columns: auto 10%;
+    justify-content: space-around;
     width: 100%;
     height:  100%;
 }
@@ -30,7 +47,7 @@ header{
     /* background-color: #09112B; */
     background-color: #0a0b0c;
     width: 100%;
-    height: 72px;
+    height: 75px;
     display: grid;
     grid-template-columns: 1fr 3fr 1fr;
     place-content: center;
@@ -40,7 +57,7 @@ header{
     align-items: center;
 }
 header .header-img-logo{
-    width: 150px;
+    width: 145px;
     cursor: pointer;
 }
 
@@ -54,7 +71,7 @@ header .link-border {
     align-items: center;
 }
 
-/* ----------------------------------------- Stylos de link Border */
+/* ----------------------------------------- Stylos de efecto link Border */
 .link-border a {
 	color: #ffffff;
 	font-weight: 500;
@@ -125,10 +142,12 @@ header .header-change-idioma{
 /* ----------------------------------------- Stylos main social media*/
  main .main-section-social-media{
     width: 40px;
-    position: fixed;
+    display: flex;
+    align-items: flex-end;
     bottom: 0px;
     right: 70px;
     left: auto;
+    z-index: 1;
 }
 main .tyled-Social-List{
     display: flex;
@@ -138,9 +157,11 @@ main .tyled-Social-List{
     margin: 0px;
     padding: 0px;
     list-style: none;
+    z-index: 1;
 }
 main .tyled-Social-List li {
     display: list-item;
+    z-index: 1;
 }
 main .tyled-Social-List a {
     display: inline-block;
@@ -148,6 +169,7 @@ main .tyled-Social-List a {
     text-decoration-skip-ink: auto;
     color: white;
     position: relative;
+    z-index: 1;
 }
 
 
@@ -155,7 +177,7 @@ main .tyled-Social-List a {
 main .main-section-info{
    display: flex;
    flex-direction: column;
-   justify-content: center ;
+   justify-content: flex-start ;
    padding: 80px 150px ;
 }
 main .main-section-info h1{
@@ -181,6 +203,7 @@ main .main-section-info p{
     line-height: 1.5;
     font-weight: 400;
     margin: 30px 0;
+    padding-right: 200px;
 }
 main .main-section-info span{
     color: #ffffff;
@@ -192,8 +215,8 @@ main .main-section-info span{
 main .main-section-info button{
     font-size: 24px;
     font-weight: bolder;
-    height: 80px;
-    width: 350px;
+    height: 75px;
+    width: 380px;
     background: none;
     border:1px solid #3DAFD3;
     border-radius: 5px;
@@ -201,14 +224,14 @@ main .main-section-info button{
     cursor: pointer;
 } 
 main .main-section-info div{
-    width: 70px;
-    height: 70px;
+    width: 60px;
+    height: 60px;
     background-color: #3DAFD3;
     opacity: 0.8;
     border-radius: 3px;
     display: flex;
     position: relative;
-    left: 320px;
+    left: 360px;
     bottom: 25px;
 }
 
