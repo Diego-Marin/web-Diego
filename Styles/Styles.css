@@ -1,0 +1,214 @@
+:root{
+    --titulos: red;
+}
+*{
+    padding: 0%;
+    margin: 0%;
+    color: white;
+    /* @import url('https://fonts.googleapis.com/css2? family= Fira+Code:wght@400;700 & display=swap');
+    font-family: 'Fira Code', monospace; */
+
+    @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+Mono:wght@100;200;300;400;500;600;700;800;900&display=swap');
+    font-family: 'Noto Sans Mono', monospace;
+}
+body{
+    display: grid;
+    place-items: center;
+    background: #1a1c20;
+    overflow-x:hidden;
+    overflow-y:hidden;
+}
+main{
+    display:grid;
+    grid-template-columns: 1fr minmax(40px, 10%) ;
+    width: 100%;
+    height:  100%;
+}
+
+/* ----------------------------------------- Stylos Header*/
+header{
+    /* background-color: #09112B; */
+    background-color: #0a0b0c;
+    width: 100%;
+    height: 72px;
+    display: grid;
+    grid-template-columns: 1fr 3fr 1fr;
+    place-content: center;
+    padding: 0px 80px 0px 150px; 
+    box-sizing: border-box;
+    align-content: center;
+    align-items: center;
+}
+header .header-img-logo{
+    width: 150px;
+    cursor: pointer;
+}
+
+/* ----------------------------------------- Stylos de link Border */
+header .link-border {
+    display: flex;
+    justify-content: flex-end;
+    gap: 50px;
+    font-size: 16px;
+    font-weight: 400;
+    align-items: center;
+}
+
+/* ----------------------------------------- Stylos de link Border */
+.link-border a {
+	color: #ffffff;
+	font-weight: 500;
+	-webkit-transition: -webkit-transform 0.2s;
+	transition: transform 0.2s;
+    text-decoration: none;
+}
+.link-border a:hover,
+.link-border a:focus {
+	-webkit-transform: scale(0.8333);
+	transform: scale(0.8333);
+}
+.link-border a::before {
+	position: absolute;
+	top: -8px;
+	left: -8px;
+	box-sizing: content-box;
+	padding: 5px;
+	width: 100%;
+	height: 25px;
+	border: 1px solid #3DAFD3;
+    border-radius: 5px;
+	content: '';
+	opacity: 0;
+	-webkit-transition: opacity 0.2s, -webkit-transform 0.2s;
+	transition: opacity 0.2s, transform 0.2s;
+	-webkit-transform: scale(0.2);
+	transform: scale(0.2);
+}
+.link-border a:hover::before,
+.link-border a:focus::before {
+	opacity: 1;
+	-webkit-transform: scale(1.2);
+	transform: scale(1.2);
+}
+
+header .header-icon-sun{
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    margin-left: 30px;
+    width: 29px;
+    height: 29px; 
+    cursor: pointer; 
+    margin-right: 50px;
+}
+header .header-change-idioma{
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+}
+.header-change-idioma button{
+    background: none;
+    border-style: none;
+    font-size: 18px;
+    cursor: pointer;
+    text-decoration: none;
+    margin-left: 30px;
+    padding: 10px;
+ }
+ .header-change-idioma .button-spain{
+    border: 1px solid #3DAFD3;
+    border-radius: 5px;
+    font-weight: bolder;
+ }
+
+
+/* ----------------------------------------- Stylos main social media*/
+ main .main-section-social-media{
+    width: 40px;
+    position: fixed;
+    bottom: 0px;
+    right: 70px;
+    left: auto;
+}
+main .tyled-Social-List{
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    align-items: center;
+    margin: 0px;
+    padding: 0px;
+    list-style: none;
+}
+main .tyled-Social-List li {
+    display: list-item;
+}
+main .tyled-Social-List a {
+    display: inline-block;
+    text-decoration: none;
+    text-decoration-skip-ink: auto;
+    color: white;
+    position: relative;
+}
+
+
+/* ----------------------------------------- Stylos main Info*/
+main .main-section-info{
+   display: flex;
+   flex-direction: column;
+   justify-content: center ;
+   padding: 80px 150px ;
+}
+main .main-section-info h1{
+    font-size: 60px;
+    animation: fluido 10s ease-in-out infinite;
+    background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
+    background-size: 300%;
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+  @keyframes fluido {
+      0% { background-position: 0 50% }
+      50% { background-position: 100% 50% }
+      100% { background-position: 0 50% }
+  }
+
+
+
+
+main .main-section-info p{
+    font-size: 16px;
+    line-height: 1.5;
+    font-weight: 400;
+    margin: 30px 0;
+}
+main .main-section-info span{
+    color: #ffffff;
+    border-bottom: 1px solid #23a6d5;
+    font-size: 18px;
+    font-weight: bolder;
+    padding-bottom: 5px;
+}
+main .main-section-info button{
+    font-size: 24px;
+    font-weight: bolder;
+    height: 80px;
+    width: 350px;
+    background: none;
+    border:1px solid #3DAFD3;
+    border-radius: 5px;
+    margin-top: 45px;
+    cursor: pointer;
+} 
+main .main-section-info div{
+    width: 70px;
+    height: 70px;
+    background-color: #3DAFD3;
+    opacity: 0.8;
+    border-radius: 3px;
+    display: flex;
+    position: relative;
+    left: 320px;
+    bottom: 25px;
+}
+
