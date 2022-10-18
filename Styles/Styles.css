@@ -1,19 +1,33 @@
 /* :root{
     --backgroundDark: #1a1c20;
     --backgroundLigth: #ffffff;
+    --color-titulos
+    --color-subtitulos
+    --color-parrafos
+    --color-lineas
+    --
 } */
 *{
     padding: 0%;
     margin: 0%;
-    color: #ffffff;
+    color: #aaaaaa;
 
     /* @import url('https://fonts.googleapis.com/css2? family= Fira+Code:wght@400;700 & display=swap');
     font-family: 'Fira Code', monospace; */
 
     @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+Mono:wght@100;200;300;400;500;600;700;800;900&display=swap');
     font-family: 'Noto Sans Mono', monospace;
+    letter-spacing: 1.8px;
 }
 body{
+    width: 100%;
+    height: 100vh;
+    position:relative;
+    background: #1a1c20;
+    overflow-x:hidden;
+    overflow-y:hidden;
+}
+.page-trabajo{
     width: 100%;
     height: 100vh;
     position:relative;
@@ -42,6 +56,13 @@ main{
     width: 100%;
     height:  100%;
 }
+.main-page-trabajo{
+    display:grid;
+    grid-template-columns: auto;
+    justify-content: space-around;
+    width: 100%;
+    height:  100%;
+}
 
 /* ----------------------------------------- Stylos Header*/
 header{
@@ -54,27 +75,32 @@ header{
     place-content: center;
     padding: 0px 150px 0px 150px; 
     box-sizing: border-box;
-    align-content: center;
     align-items: center;
+    justify-items: end;
 }
-header .header-img-logo{
+.header-page-trabajo{
+    background-color: #0a0b0c;
+}
+header div{
+    justify-self: start;
+}
+header div .header-img-logo{
     width: 145px;
     cursor: pointer;
 }
 
 /* ----------------------------------------- Stylos de link Border */
-header .link-border {
-    display: flex;
-    justify-content: flex-end;
+header .link-border ul {
+    margin-top: 10px;
+    list-style: none;
+	display: inline-flex;
     gap: 45px;
     font-size: 16px;
-    font-weight: 400;
     align-items: center;
+    
 }
-
 /* ----------------------------------------- Stylos de efecto link Border */
-.link-border a {
-	color: #ffffff;
+/* .link-border a {
 	font-weight: 500;
 	-webkit-transition: -webkit-transform 0.2s;
 	transition: transform 0.2s;
@@ -107,7 +133,34 @@ header .link-border {
 	opacity: 1;
 	-webkit-transform: scale(1.2);
 	transform: scale(1.2);
+} */
+
+.link-border ul li a {
+	position: relative;
+	display: inline-block;
+	text-decoration: none;
+	letter-spacing: 1.8px;
+    padding-bottom: 5px;
+	overflow: hidden;
+	text-transform: uppercase;
 }
+
+.link-border ul li a:before {
+	content: '';
+	width: 100%;
+	height: 1.5px;
+	position: absolute;
+	bottom: 0;
+	left: calc(-101%);
+	background:#3DAFD3;
+	transition: 0.3s ease-in-out;
+}
+
+.link-border ul li a:hover:before {
+	left: 0;
+}
+
+
 header .header-icon-sun{
     display: flex;
     align-items: center;
@@ -124,6 +177,7 @@ header .header-change-idioma{
     justify-content: flex-end;
 }
 .header-change-idioma button{
+    color: #cccccf;
     background: none;
     border-style: none;
     font-size: 18px;
@@ -133,7 +187,7 @@ header .header-change-idioma{
     padding: 12px 15px;
  }
  .header-change-idioma .button-spain{
-    border: 1px solid #3DAFD3;
+    border: 1.5px solid #3DAFD3;
     border-radius: 5px;
     font-weight: bolder;
  }
@@ -201,23 +255,27 @@ main .main-section-info p{
     padding-right: 200px;
 }
 main .main-section-info span{
-    color: #ffffff;
+    color: #c1c1c1;
     border-bottom: 1px solid #23a6d5;
     font-size: 18px;
     font-weight: bolder;
     padding-bottom: 5px;
 }
-main .main-section-info button{
+.main-section-info button{
+    color: #c1c1c1;
     font-size: 24px;
     font-weight: bolder;
     height: 75px;
     width: 380px;
     background: none;
-    border:1px solid #3DAFD3;
+    border:1.5px solid #3DAFD3;
     border-radius: 5px;
     margin-top: 45px;
     cursor: pointer;
 } 
+.boton-resumen:hover{
+    background-color: #1e2023;
+  }
 main .retangule-1{
     width: 60px;
     height: 60px;
@@ -240,4 +298,24 @@ main .retangule-2{
     left: 410px;
     bottom: 40px;
 }
+/*--------------------------------------------------Stilos pagina trabajo*/
+.parent {
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+    width: 100%;
+    display: grid;
+    /* horizontal centering */
+    justify-items: center;
+    /* vertical centering */
+    align-items: center;
 
+}
+
+.child {
+  background: #212226;
+  width: 900px;
+  height: 80%;
+  padding: 1rem;
+  border-radius: 10px;
+ }
